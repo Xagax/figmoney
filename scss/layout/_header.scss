@@ -1,0 +1,143 @@
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: $purple;
+	color: $white;
+	padding: 15px 0;
+	z-index: 2;
+
+	.header__container {
+		max-width: 970px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+}
+
+/* menu styles */
+.menu{
+	float:right;
+
+	.opener{
+		@include media('>=tablet') {
+			display:none;
+		}
+	}
+
+	.menu__drop{
+		@include media('<tablet') {
+			overflow: hidden;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			z-index: 999;
+			width: 100%;
+			left: 100%;
+			transition: all 0.25s linear;
+			padding: 0 15px;
+			background: $purple;
+		}
+		@include media('>=tablet') {
+			float:left;
+		}
+
+		.active & {
+			@include media('<tablet') {
+				left: 0;
+			}
+		}
+	}
+
+	.drop__list {
+		float:left;
+		margin:0;
+		padding:0;
+		list-style:none;
+
+		@include media('<tablet') {
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	.drop__item {
+		position:relative;
+		float:left;
+		margin:5px 0 0 15px;
+		padding:0 4px 10px;
+
+		@include media('<tablet') {
+			float: none;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.drop__link {
+		text-decoration:none;
+		color:$white;
+		transition:all 0.2s linear;
+
+		@include media('<tablet') {
+			display: block;
+			padding: 10px 0;
+			border-bottom: 1px solid $white;
+		}
+
+		&:hover{color: $green;}
+	}
+}
+
+/* burger menu style */
+.opener{
+	float:right;
+	width:31px;
+	height:31px;
+	background:$white;
+	background:rgba(0, 0, 0, .5);
+	position:relative;
+	border-radius:3px;
+	text-indent:-9999px;
+	overflow:hidden;
+	border-bottom: none !important;
+}
+.opener:before,
+.opener:after,
+.opener span{
+	background:#fff;
+	border-radius:4px;
+	position:absolute;
+	top:16px;
+	left:25%;
+	right:25%;
+	height:3px;
+	margin-top:-2px;
+	transition:all 0.2s linear;
+}
+.opener:before,
+.opener:after{
+	content:'';
+	top:10px;
+}
+.opener:after{top:22px;}
+/* close button transition */
+.close-btn span,
+.active .opener span{opacity:0;}
+.opener:hover{opacity:.9;}
+.close-btn:after,
+.close-btn:before,
+.active .opener:after,
+.active .opener:before{
+	transform:rotate(45deg);
+	top:16px;
+	left:16%;
+	right:15%;
+}
+.close-btn:after,
+.active .opener:after{
+	transform:rotate(-45deg);
+}
