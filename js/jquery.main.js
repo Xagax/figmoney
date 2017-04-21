@@ -200,7 +200,7 @@ function initMobileNav() {
 						}
 						self.setSlidesPosition(self.currentIndex);
 					}
-			    }, 500);
+			    }, 10);
 			};
 			$(window).bind('load resize orientationchange', this.resizeHandler);
 			if(self.options.stretchSlideToMask) {
