@@ -1,5 +1,11 @@
 body {
 	min-width: $base-min-width;
+
+	&.form {
+		background-color: transparent;
+		min-width: 0;
+
+	}
 }
 
 h1, h2 {
@@ -9,6 +15,10 @@ h1, h2 {
 
 a {
 	@include animate(color background);
+}
+
+iframe {
+	width: 100%;
 }
 
 #wrapper {
@@ -32,6 +42,11 @@ a {
 	color: $green;
 	text-align: center;
 	padding: 129px 0 79px;
+
+	@include media('>=tablet') {
+		min-height: 200px;
+		padding: 100px 0 43px;
+	}
 }
 
 /* cycle carousel basic styles */
@@ -43,9 +58,16 @@ a {
 
 	@include media('<tablet') {
 		text-align: center;
+		background: 0% 50% / cover;
 	}
 
 	&.cycle-gallery__reverse {
+		.mask {
+			@include media('<tablet') {
+				max-width: 250px;
+				margin: 0 auto;
+			}
+		}
 		.cycle-gallery__slide {
 			.container {
 				flex-direction: row-reverse;
@@ -385,6 +407,34 @@ a {
 	justify-content: center;
 	align-items: stretch;
 	padding: 0 !important;
+
+	&.subscribe-form-small {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+
+		.row,
+		.mc-field-group {
+			display: flex;
+			justify-content: space-between;
+			align-items: stretch;
+		}
+
+		.subscribe-form__label {
+			align-self: center;
+			color: $white;
+		}
+
+		[type=submit],
+		.subscribe-form__buttons {
+			padding: 0 16px;
+		}
+		.subscribe-form__input {
+			border: none;
+			width: 120px !important;
+			border: none !important;
+		}
+	}
 
 	>div {
 		width: 100%;

@@ -17,7 +17,7 @@ function initCycleCarousel() {
 		pauseOnHover: true,
 		maskAutoSize: true,
 		autoRotation: true,
-		switchTime: 3000,
+		switchTime: 4500,
 		animSpeed: 500
 	});
 	jQuery('.cycle-gallery__vertical').scrollAbsoluteGallery({
@@ -32,7 +32,7 @@ function initCycleCarousel() {
 		maskAutoSize: true,
 		vertical: true,
 		autoRotation: true,
-		switchTime: 3200,
+		switchTime: 4600,
 		animSpeed: 500
 	});
 }

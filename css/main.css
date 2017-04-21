@@ -646,6 +646,9 @@ input[type='submit'] {
 
 body {
   min-width: 320px; }
+  body.form {
+    background-color: transparent;
+    min-width: 0; }
 
 h1, h2 {
   font-weight: 400;
@@ -654,6 +657,9 @@ h1, h2 {
 a {
   -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
           transition: color 0.3s ease-in-out, background 0.3s ease-in-out; }
+
+iframe {
+  width: 100%; }
 
 #wrapper {
   position: relative;
@@ -670,6 +676,10 @@ a {
   color: #8bd35f;
   text-align: center;
   padding: 129px 0 79px; }
+  @media (min-width: 568px) {
+    .section-intro {
+      min-height: 200px;
+      padding: 100px 0 43px; } }
 
 /* cycle carousel basic styles */
 .cycle-gallery,
@@ -680,7 +690,13 @@ a {
   @media (max-width: 567px) {
     .cycle-gallery,
     .cycle-gallery__vertical {
-      text-align: center; } }
+      text-align: center;
+      background: 0% 50% / cover; } }
+  @media (max-width: 567px) {
+    .cycle-gallery.cycle-gallery__reverse .mask,
+    .cycle-gallery__vertical.cycle-gallery__reverse .mask {
+      max-width: 250px;
+      margin: 0 auto; } }
   .cycle-gallery.cycle-gallery__reverse .cycle-gallery__slide .container,
   .cycle-gallery__vertical.cycle-gallery__reverse .cycle-gallery__slide .container {
     -webkit-box-orient: horizontal;
@@ -988,6 +1004,38 @@ a {
       -ms-flex-align: stretch;
           align-items: stretch;
   padding: 0 !important; }
+  .subscribe-form.subscribe-form-small {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+    .subscribe-form.subscribe-form-small .row,
+    .subscribe-form.subscribe-form-small .mc-field-group {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch; }
+    .subscribe-form.subscribe-form-small .subscribe-form__label {
+      -ms-flex-item-align: center;
+          align-self: center;
+      color: #fff; }
+    .subscribe-form.subscribe-form-small [type=submit],
+    .subscribe-form.subscribe-form-small .subscribe-form__buttons {
+      padding: 0 16px; }
+    .subscribe-form.subscribe-form-small .subscribe-form__input {
+      border: none;
+      width: 120px !important;
+      border: none !important; }
   .subscribe-form > div {
     width: 100%; }
   .subscribe-form .row,
