@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script type="text/javascript">
+    var host = "figmoney.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https:";
+	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Fig Money</title>
@@ -16,7 +21,7 @@
 	<div id="wrapper">
 		<header id="header">
 			<div class="header__container">
-				<strong class="logo"><a href="#"><img src="images/logo.png" alt="Fig Money"></a></strong>
+				<strong class="logo"><a href="#"><img src="images/figmoney-logo@1x.png" srcset="images/figmoney-logo@2x.png 2x, images/figmoney-logo@3x.png 3x, images/figmoney-logo@4x.png 4x" alt="Fig Money"></a></strong>
 				<nav class="menu">
 					<a href="#" class="opener"><span>Menu</span></a>
 					<div class="menu__drop">
