@@ -78,8 +78,9 @@
 	}
 
 	.drop__link {
-		text-decoration:none;
+		text-decoration: none;
 		color:$white;
+		text-transform: capitalize;
 		transition:all 0.2s linear;
 
 		@include media('<tablet') {
