@@ -30,6 +30,7 @@ iframe {
 	max-width: 596px;
 	padding: 0 15px;
 	margin: 0 auto;
+
 }
 
 .clearfix{
@@ -42,6 +43,10 @@ iframe {
 	color: $green;
 	text-align: center;
 	padding: 129px 0 79px;
+
+	&__text-alt {
+		color: #ffffff;
+	}
 
 	@include media('>=tablet') {
 		min-height: 200px;
