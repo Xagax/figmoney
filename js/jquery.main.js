@@ -17,7 +17,7 @@ function initCycleCarousel() {
 		pauseOnHover: true,
 		maskAutoSize: true,
 		autoRotation: true,
-		switchTime: 4500,
+		switchTime: 9500,
 		animSpeed: 500
 	});
 	jQuery('.cycle-gallery__vertical').scrollAbsoluteGallery({
@@ -32,7 +32,7 @@ function initCycleCarousel() {
 		maskAutoSize: true,
 		vertical: true,
 		autoRotation: true,
-		switchTime: 4600,
+		switchTime: 9500,
 		animSpeed: 500
 	});
 }
@@ -71,7 +71,7 @@ function initMobileNav() {
 			autoRotation: false,
 			pauseOnHover: false,
 			stretchSlideToMask: false,
-			switchTime: 3000,
+			switchTime: 9500,
 			animSpeed: 500,
 			handleTouch: true,
 			swipeThreshold: 15,
@@ -558,7 +558,7 @@ function initMobileNav() {
 			autoRotation: false,
 			pauseOnHover: isTouchDevice ? false : true,
 			maskAutoSize: false,
-			switchTime: 4000,
+			switchTime: 9500,
 			animSpeed: 600,
 			event: 'click',
 			swipeThreshold: 15,
