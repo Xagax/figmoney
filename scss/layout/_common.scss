@@ -40,9 +40,12 @@ iframe {
 .section-intro {
 	background: $purple;
 	min-height: 300px;
-	color: $green;
 	text-align: center;
 	padding: 129px 0 79px;
+
+	&__text {
+		color: $green;
+	}
 
 	&__text-alt {
 		color: #ffffff;
