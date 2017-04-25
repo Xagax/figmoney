@@ -48,7 +48,7 @@ iframe {
 	}
 
 	&__text-alt {
-		color: #ffffff;
+		color: $white;
 	}
 
 	@include media('>=tablet') {
