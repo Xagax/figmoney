@@ -15,10 +15,19 @@ h6, .h6,
 
 h1, .h1 {
   font-size: $h1-font-size;
+
+  @include media('<tablet') {
+    font-size: $h1-font-size * .8;
+  }
 }
 
 h2, .h2 {
   font-size: $h2-font-size;
+
+  @include media('<tablet') {
+    font-size: $h2-font-size * .8;
+  }
+
 }
 
 h3, .h3 {
