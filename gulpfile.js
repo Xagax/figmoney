@@ -28,11 +28,9 @@ gulp.task('copyJs', function() {
   .pipe(gulp.dest('public/js/'))
 });
 
-gulp.task('watchHtml', function() {
-  gulp.src('*.html')
-  .pipe(browserSync.reload({
-    stream: true
-  }));
+// Reload all Browsers
+gulp.task('bs-reload', function () {
+    browserSync.reload();
 });
 
 
@@ -79,7 +77,7 @@ gulp.task('browserSync', function() {
 gulp.task('watch', [ 'browserSync', 'sass' ], function() {
   gulp.watch('src/scss/**/*.scss', [ 'sass' ]);
 
-  gulp.watch('./*.html', [ 'watchHtml' ]);
+  gulp.watch('*.html', [ 'bs-reload' ]);
 
   gulp.watch('src/images/*.+(png|jpg|jpeg)', [ 'imageMin' ]);
 
