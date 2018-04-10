@@ -23,6 +23,11 @@ gulp.task('clean:public', function() {
   return del.sync('public');
 });
 
+gulp.task('copyJs', function() {
+  gulp.src('src/js/*')
+  .pipe(gulp.dest('public/js/'))
+});
+
 //compile Sass and minify resulting css
 gulp.task('sass', function() {
   gulp.src('src/scss/main.scss')
@@ -45,4 +50,31 @@ gulp.task('imageMin', function() {
                 .pipe(browserSync.reload({
                   stream: true
                 }));
+});
+
+
+
+
+//********* Build,  Deploy, and Watch Tasks ************//
+
+gulp.task('build', [ 'lintJs', 'imageMin', 'sass', 'concatAndMinifyJs' ]);
+
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: '.'
+    }
+  });
+});
+
+
+gulp.task('watch', [ 'browserSync', 'sass' ], function() {
+  gulp.watch('src/stylesheets/**/*.scss', [ 'sass' ]);
+
+  gulp.watch('src/assets/js/*.js', [ 'lintJs', 'concatAndMinifyJs' ]);
+
+  gulp.watch('./index.html', [ 'watchIndex' ]);
+
+  gulp.watch('src/assets/images/*.+(png|jpg|jpeg)', [ 'imageMin' ]);
+
 });
