@@ -34,3 +34,15 @@ gulp.task('sass', function() {
         stream: true
       }));
 });
+
+
+//Optimize images
+gulp.task('imageMin', function() {
+    return gulp.src('src/images/*')
+                .pipe(imagemin())
+                .on('error', handleError)
+                .pipe(gulp.dest('public/images'))
+                .pipe(browserSync.reload({
+                  stream: true
+                }));
+});
