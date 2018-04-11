@@ -28,6 +28,11 @@ gulp.task('copyJs', function() {
   .pipe(gulp.dest('public/js/'))
 });
 
+gulp.task('copySVG', function() {
+  gulp.src('src/images/*.svg')
+  .pipe(gulp.dest('public/images/'))
+});
+
 // Reload all Browsers
 gulp.task('bs-reload', function () {
     browserSync.reload();
@@ -80,5 +85,7 @@ gulp.task('watch', [ 'browserSync', 'sass' ], function() {
   gulp.watch('*.html', [ 'bs-reload' ]);
 
   gulp.watch('src/images/*.+(png|jpg|jpeg)', [ 'imageMin' ]);
+
+  gulp.watch('src/images/*.svg', [ 'copySVG' ]);
 
 });

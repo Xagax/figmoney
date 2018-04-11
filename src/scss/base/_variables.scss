@@ -10,7 +10,7 @@ $light-blue: #39f;
 $purple: #2f2747;
 $green: #8bd35f;
 $light-green: #69bc62;
-$dark-green: rgb(0, 147, 95); 
+$dark-green: rgb(0, 147, 95);
 
 
 $base-font-sans-serif: 'Cabin', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
@@ -20,7 +20,7 @@ $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 // Body
 $base-text-color: $gray !default;
 $base-background-color: $white !default;
-$font-size-base: 14px !default;
+$font-size-base: 1rem !default;
 $line-height-base: 1.286 !default;
 $base-font-family: $base-font-sans-serif !default;
 
@@ -44,9 +44,9 @@ $form-element-focus-border-color: $black !default;
 $placeholder-color: $gray !default;
 
 // Headers
-$h1-font-size: 36px !default;
-$h2-font-size: 24px !default;
-$h3-font-size: 24px !default;
+$h1-font-size: 42px !default;
+$h2-font-size: 32px !default;
+$h3-font-size: 28px !default;
 $h4-font-size: 21px !default;
 $h5-font-size: 17px !default;
 $h6-font-size: 15px !default;
