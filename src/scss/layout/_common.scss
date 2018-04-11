@@ -102,6 +102,16 @@ iframe {
 		}
 	}
 
+	&-testimonial {
+		background-color: #F0F0F0;
+
+		.testimonial {
+			/* Rectangle 4: */
+			background: #FFFFFF;
+			border-radius: 3px;
+		}
+	}
+
 	&-our-mission {
 		margin: 50px 20px;
 
@@ -153,13 +163,24 @@ iframe {
 	}
 }
 
-#mc_embed_signup .button {
-	background-color: $green !important;
+//Override the mailchimp styles
+// #mc_embed_signup {
+// 	background-color: inherit;
+// }
+.mc_embed_signup {
+	// background-color: #2f2747 !important;
+	font-family: $base-font-family !important;
+	.button {
+		background-color: $green !important;
+		font-family: inherit
 
-	&:hover {
-		background-color: $light-green !important;
+		&:hover {
+			background-color: $light-green !important;
+		}
 	}
 }
+
+
 
 
 // /* cycle carousel basic styles */
