@@ -20,7 +20,7 @@ $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 // Body
 $base-text-color: $gray !default;
 $base-background-color: $white !default;
-$font-size-base: 1rem !default;
+$font-size-base: 1.1rem !default;
 $line-height-base: 1.286 !default;
 $base-font-family: $base-font-sans-serif !default;
 
@@ -46,8 +46,8 @@ $placeholder-color: $gray !default;
 // Headers
 $h1-font-size: 42px !default;
 $h2-font-size: 32px !default;
-$h3-font-size: 28px !default;
-$h4-font-size: 21px !default;
+$h3-font-size: 20px !default;
+$h4-font-size: 18px !default;
 $h5-font-size: 17px !default;
 $h6-font-size: 15px !default;
 
